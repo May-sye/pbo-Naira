@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crud node js - MySQL</title>
+</head>
+<body>
+    <h1>daftar user/pengguna</h1>
+    <table border="1">
+        <tr>
+            <th>nim</th>
+            <th>namamhs</th>
+            <th>jeniskelamin</th>
+            <th>kodejurusan</th>
+            <th>aksi</th>
+        </tr>
+        <% user.forEach(user => {%> 
+        <tr>
+            <td><%= user, nim %></td>
+            <td><%= user, namamhs %></td>
+            <td><%= user, jeniskelamin %></td>
+            <td><%= user, kodejurusan %></td>
+            <td>
+                <a href="/edit/<%= user, id %>">edit</a> |
+                <a href="/delete/<%= user, id %>">edit</a> |
+
+            </td>
+        </tr>
+        <% }) %>
+    </table>
+    <h2>tambah pengguna baru</h2>
+    <form action="/add" method="post">
+        <label for="nim"> nim: </label>
+        <input type="number" id="nim" name="nim" required> <br>
+        <label for="namamhs"> namamhs: </label>
+        <input type="text" name="namamhs" id="namamhs"> <br>
+        <label for="jeniskelamin"> jeniskelamin: </label>
+        <input type="text" name="jeniskelamin" id="jeniskelamin"> <br>
+        <label for="kodejurusan"> kodejurusan: </label>
+        <input type="number" name="kodejurusan" id="kodejurusan"><br>
+        <button type="submit">tambah</button>
+    </form>
+</body>
+</html>

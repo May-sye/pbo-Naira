@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit data mahasiswa </title>
+</head>
+<body>
+    <h2>edit data mahasiswa </h2>
+    <form action="/update/ <%= mahasiswa.id %" method="post">
+        <label for="nim"> nim: </label>
+        <input type="number" id="nim" name="nim" required value="<%= user.nim %">"  <br>
+        <label for="namamhs"> nama: </label>
+        <input type="text" name="namamhs" id="namamhs" value="<%= user.namamhs %""> <br>
+        <label for="jeniskelamin"> jeniskelamin: </label>
+        <input type="text" name="jeniskelamin" id="jeniskelamin" value="<%= user.jeniskelamin %""><br>
+        <label for="kodejurusan"> kodejurusan: </label>
+        <input type="number" name="kodejurusan" id="kodejurusan" value="<%= user.kodejurusan %""><br>
+        <button type="submit">simpan</button>
+    </form>
+</body>
+</html>
